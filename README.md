@@ -1,4 +1,4 @@
-### Hotkey Extension
+### Hotkey Expansion
 
 Keys | Description
 -- | --
