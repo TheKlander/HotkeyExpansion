@@ -11,7 +11,7 @@ using UnityEngine;
 
 namespace HotkeyExpansion
 {
-    [BepInPlugin("com.theklander.HotkeyExpansion", "Hotkey Expansion", "1.1.0")]
+    [BepInPlugin("com.theklander.HotkeyExpansion", "Hotkey Expansion", "1.2.0")]
     [BepInDependency("com.aidanamite.ConfigTweaks", BepInDependency.DependencyFlags.HardDependency)]
     public class Main : BaseUnityPlugin
     {
@@ -181,7 +181,7 @@ namespace HotkeyExpansion
         public void Update()
         {
             // Don't process hotkeys if chat is active
-            if (IsChatActive())
+            if (IsChatActive() || Input.GetKey(KeyCode.LeftControl))
             {
                 return;
             }
